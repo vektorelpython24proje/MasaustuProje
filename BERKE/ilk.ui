@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>551</width>
-    <height>312</height>
+    <height>672</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>30</x>
       <y>20</y>
       <width>501</width>
-      <height>161</height>
+      <height>421</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout">
@@ -33,6 +33,13 @@
      </item>
      <item row="0" column="1">
       <widget class="QLineEdit" name="txtUserName"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Şifre:</string>
+       </property>
+      </widget>
      </item>
      <item row="1" column="1">
       <widget class="QLineEdit" name="txtSifre">
@@ -55,10 +62,16 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_2">
+     <item row="4" column="1">
+      <widget class="QTableWidget" name="tbl"/>
+     </item>
+     <item row="5" column="1">
+      <widget class="QComboBox" name="cbx"/>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLabel" name="lblSonuc">
        <property name="text">
-        <string>Şifre:</string>
+        <string>TextLabel</string>
        </property>
       </widget>
      </item>
