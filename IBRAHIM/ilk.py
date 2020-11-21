@@ -9,21 +9,21 @@ class App(QDialog):
         self.initUI()
 
     def initUI(self):
+        self.table.setRowCount(10)
+        self.table.setColumnCount(2)
         self.bgiris.clicked.connect(self.girisyap)
         self.biptal.clicked.connect(self.temizle)
         self.show()
 
     def girisyap(self):
-        if self.txtUsername.text()=="Echore04":
-            if self.txtPass.text()=="123456":
-                print("Giriş Yapıldı")
+        pass
 
     def temizle(self):
         self.txtUsername.setText("")
         self.txtSifre.setText("")
         self.close()
 
-    def tiklandi():
+    def tiklandi(self):
         self.txtUsername.setText("")
         self.txtPass.setText("")
 
