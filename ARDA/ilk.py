@@ -5,7 +5,7 @@ from PyQt5 import uic
 class App(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi(r"EDIZ\ilk.ui",self)  # graphical user interface
+        uic.loadUi(r"ARDA\ilk.ui",self)  # graphical user interface
         self.initUI()
     
     def initUI(self):
