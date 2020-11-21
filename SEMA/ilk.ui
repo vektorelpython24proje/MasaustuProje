@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>606</width>
+    <width>1109</width>
     <height>675</height>
    </rect>
   </property>
@@ -20,10 +20,30 @@
       <x>50</x>
       <y>20</y>
       <width>531</width>
-      <height>161</height>
+      <height>501</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout">
+     <item row="2" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Kullanıcı Adı:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="txtUserName"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Şifre:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="txtSifre"/>
+     </item>
      <item row="4" column="1">
       <widget class="QPushButton" name="btGiris">
        <property name="text">
@@ -38,23 +58,16 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
-      <widget class="QLineEdit" name="txtUserName"/>
+     <item row="6" column="1">
+      <widget class="QTableWidget" name="tbl"/>
      </item>
-     <item row="3" column="1">
-      <widget class="QLineEdit" name="txtSifre"/>
+     <item row="7" column="1">
+      <widget class="QComboBox" name="cmb"/>
      </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="kullaniciadi">
+     <item row="8" column="1">
+      <widget class="QLabel" name="lblSonuc">
        <property name="text">
-        <string>Kullanı adı:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="sifre">
-       <property name="text">
-        <string>Şifre:</string>
+        <string>TextLabel</string>
        </property>
       </widget>
      </item>
@@ -66,7 +79,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>606</width>
+     <width>1109</width>
      <height>26</height>
     </rect>
    </property>
