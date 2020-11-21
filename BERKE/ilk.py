@@ -9,17 +9,20 @@ class App(QMainWindow):
         self.initUI()
 
     def initUI(self):
-        
-        
-        
-        self.btnIptal.clicked.connect(self.tiklandi)
-        
-
+        self.btnGiris.clicked.connect(self.girisYap)
+        self.btnIptal.clicked.connect(self.temizle)
         self.show()
     
-    def tiklandi(self):
-        print("Tiklandi")
 
+    def girisYap(self):
+        if self.txtUserName.text() == "BERKE":
+            if self.txtSifre.text()== "12345":
+                print("Giriş Başarılı")
+
+    def temizle(self):
+        self.txtUserName.setText("")
+        self.txtSifre.setText("")
+        self.close()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
