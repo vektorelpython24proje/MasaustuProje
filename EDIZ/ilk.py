@@ -9,12 +9,20 @@ class App(QMainWindow):
         self.initUI()
     
     def initUI(self):
-
-        self.btIptal.clicked.connect(self.tiklandi)
+        self.tbl.setRowCount(10)
+        self.tbl.setColumnCount(2)
+        self.btGiris.clicked.connect(self.girisYap)
+        self.btIptal.clicked.connect(self.temizle)
         self.show()
 
-    def tiklandi(self):
-        self.txt
+    def girisYap(self):
+        pass
+
+
+    def temizle(self):
+        self.txtUserName.setText("")
+        self.txtSifre.setText("")
+        self.close()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
