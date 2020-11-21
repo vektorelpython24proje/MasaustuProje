@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication,QMainWindow,QPushButton
-from PyQt5 import uic
+from PyQt5 import uic,QtWidgets
 
 class App(QMainWindow):
     def __init__(self):
@@ -11,13 +11,24 @@ class App(QMainWindow):
     def initUI(self):
         self.btnGiris.clicked.connect(self.girisYap)
         self.btnIptal.clicked.connect(self.temizle)
+        self.tbl.setRowCount(1)
+        self.tbl.setColumnCount(2)
+        self.cbx.currentTextChanged.connect(self.sonuc)
         self.show()
     
 
     def girisYap(self):
-        if self.txtUserName.text() == "BERKE":
-            if self.txtSifre.text()== "12345":
-                print("Giriş Başarılı")
+        numRows = self.tbl.rowCount()
+        kullanici = QtWidgets.QTableWidgetItem(self.txtUserName.text())
+        sifre = QtWidgets.QTableWidgetItem(self.txtSifre.text())
+        self.tbl.setItem(numRows-1,0,kullanici)
+        self.tbl.setItem(numRows-1,1,sifre)
+        self.tbl.setRowCount(numRows+1)
+        self.cbx.addItem(self.txtUserName.text())
+        
+    def sonuc(self):
+        sonuc = self.cbx.currentText()
+        self.lblSonuc.setText(sonuc)
 
     def temizle(self):
         self.txtUserName.setText("")
