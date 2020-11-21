@@ -9,9 +9,9 @@ class App(QMainWindow):
     def initUI(self):
         self.setGeometry(300,300,300,220)
         self.setWindowTitle("İlk Pencere")
-        self.show
+        self.show()
 
-if __name__ == "__main__":
-    app=QApplication(sys.argv)
-    ex = App()
-    sys.exit(app.exec_())
+if __name__== "__main__":
+    app = QApplication(sys.argv)
+    ex=App()
+    sys.exit(app.exec())
