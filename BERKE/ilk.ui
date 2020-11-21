@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>606</width>
-    <height>675</height>
+    <width>551</width>
+    <height>312</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,42 +17,46 @@
    <widget class="QWidget" name="formLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>30</x>
       <y>20</y>
-      <width>531</width>
+      <width>501</width>
       <height>161</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout">
-     <item row="4" column="1">
-      <widget class="QPushButton" name="btGiris">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Kullanıcı Adı:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="txtUserName"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="txtSifre">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="btnGiris">
        <property name="text">
         <string>Giriş Yap</string>
        </property>
       </widget>
      </item>
-     <item row="5" column="1">
-      <widget class="QPushButton" name="btIptal">
+     <item row="3" column="1">
+      <widget class="QPushButton" name="btnIptal">
        <property name="text">
         <string>İptal</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
-      <widget class="QLineEdit" name="txtUserName"/>
-     </item>
-     <item row="3" column="1">
-      <widget class="QLineEdit" name="txtSifre"/>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="kullaniciadi">
-       <property name="text">
-        <string>Kullanı adı:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="sifre">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
        <property name="text">
         <string>Şifre:</string>
        </property>
@@ -66,8 +70,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>606</width>
-     <height>26</height>
+     <width>551</width>
+     <height>27</height>
     </rect>
    </property>
   </widget>
