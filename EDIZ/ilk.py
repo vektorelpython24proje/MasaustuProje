@@ -9,14 +9,15 @@ class App(QMainWindow):
         self.initUI()
     
     def initUI(self):
+        self.tbl.setRowCount(10)
+        self.tbl.setColumnCount(2)
         self.btGiris.clicked.connect(self.girisYap)
         self.btIptal.clicked.connect(self.temizle)
         self.show()
 
     def girisYap(self):
-        if self.txtUserName.text() == "ediz":
-            if self.txtSifre.text() == "12345":
-                print("Giriş Başarılı")
+        pass
+
 
     def temizle(self):
         self.txtUserName.setText("")
