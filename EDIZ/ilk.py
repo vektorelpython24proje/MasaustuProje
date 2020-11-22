@@ -13,6 +13,7 @@ class App(QMainWindow):
         self.tbl.setColumnCount(2)
         self.btGiris.clicked.connect(self.girisYap)
         self.btIptal.clicked.connect(self.temizle)
+        self.cmb.currentTextChanged.connect(self.sonuc)
         self.show()
 
     def girisYap(self):
@@ -23,6 +24,10 @@ class App(QMainWindow):
         self.tbl.setItem(numRows-1,1,sifre)
         self.tbl.setRowCount(numRows+1)
         self.cmb.addItem(self.txtUserName.text())
+
+    def sonuc(self):
+        sonuc = self.cmb.currentText()
+        self.lblSonuc.setText(sonuc)
 
     def temizle(self):
         self.txtUserName.setText("")
