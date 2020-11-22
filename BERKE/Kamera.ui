@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>741</width>
-    <height>549</height>
+    <width>753</width>
+    <height>662</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,31 +17,101 @@
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>721</width>
-      <height>491</height>
+      <x>9</x>
+      <y>9</y>
+      <width>731</width>
+      <height>471</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QPushButton" name="btnAc">
+       <property name="text">
+        <string>Kamera Aç</string>
+       </property>
+      </widget>
+     </item>
      <item row="2" column="0">
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="btnKapat">
        <property name="text">
         <string>İptal</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QProgressBar" name="pB">
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QSlider" name="Slider">
+       <property name="minimum">
+        <number>10</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
       </widget>
      </item>
      <item row="0" column="0">
       <widget class="QLabel" name="lblCam">
        <property name="text">
-        <string>TextLabel</string>
+        <string/>
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="pushButton_2">
+     <item row="5" column="0">
+      <widget class="QPushButton" name="btnKaydet">
        <property name="text">
-        <string>Kamera Aç</string>
+        <string>Kaydet</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>480</y>
+      <width>731</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="1">
+      <widget class="QCheckBox" name="chkMedian">
+       <property name="text">
+        <string>Gaussian Blur</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QCheckBox" name="chkSmooth">
+       <property name="text">
+        <string>Smooth</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QCheckBox" name="chkGauss">
+       <property name="text">
+        <string>Median Blur</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QCheckBox" name="chkBilateral">
+       <property name="text">
+        <string>Bilateral Blur</string>
        </property>
       </widget>
      </item>
@@ -53,7 +123,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>741</width>
+     <width>753</width>
      <height>27</height>
     </rect>
    </property>
