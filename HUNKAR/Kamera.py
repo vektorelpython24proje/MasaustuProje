@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication,QMainWindow,QPushButton
+from PyQt5.QtWidgets import QApplication,QMainWindow
 from PyQt5 import uic,QtWidgets
 from PyQt5.QtCore import QTimer
 from PyQt5.QtGui import QImage,QPixmap
@@ -10,7 +10,7 @@ class App(QMainWindow):
     def __init__(self):
         super().__init__()
         self.timer = QTimer()
-        uic.loadUi(r"SEMA\Kamera.ui",self)  # graphical user interface
+        uic.loadUi(r"EDIZ\Kamera.ui",self)  # graphical user interface
         self.initUI()
 
     def initUI(self):

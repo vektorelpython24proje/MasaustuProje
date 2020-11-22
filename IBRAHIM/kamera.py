@@ -6,21 +6,26 @@ from PyQt5.QtGui import  QImage,QPixmap
 import cv2
 
 class App(QMainWindow):
-    def __init__(self):
+    
+def __init__(self):
         super().__init__()
+        self.timer=QTimer()
         uic.loadUi(r"IBRAHIM\kamera.ui",self)
         self.setWindowTitle("Kamera Aç/Kapat")
         self.initUI()
         
 
     def initUI(self):
+        self.camop.clicked.connect(self.camOpen)
+        self.camclose.clicked.connect(self.camClose)
         self.show()
 
     def camOpen(self):
-        pass
+        print("Kamerayı açtım")
+        self.cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
 
     def camClose(self):
-        pass
+        print("Kamerayı kapattım")
 
 
 if __name__=="__main__":
