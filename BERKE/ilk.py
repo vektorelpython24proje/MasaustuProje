@@ -39,3 +39,8 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     ex = App()
     sys.exit(app.exec_())
+
+    # UI ekranının python kodu olarak dökümünü almak
+    # cmd Anaconda Prompta geç 
+    # cd (ui dosyası dizini) 
+    # pyuic5 ilk.ui -o ilkUI.py --> (Bu UI için)
