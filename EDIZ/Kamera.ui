@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>591</width>
-    <height>684</height>
+    <width>648</width>
+    <height>776</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,11 +19,14 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>551</width>
+      <width>611</width>
       <height>561</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinimumSize</enum>
+     </property>
      <item row="2" column="0">
       <widget class="QPushButton" name="btKapat">
        <property name="text">
@@ -45,13 +48,6 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
-      <widget class="QProgressBar" name="pB">
-       <property name="value">
-        <number>0</number>
-       </property>
-      </widget>
-     </item>
      <item row="4" column="0">
       <widget class="QSlider" name="Slider">
        <property name="minimum">
@@ -68,6 +64,53 @@
        </property>
       </widget>
      </item>
+     <item row="3" column="0">
+      <widget class="QProgressBar" name="pB">
+       <property name="value">
+        <number>0</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>570</y>
+      <width>611</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QCheckBox" name="checkBox">
+       <property name="text">
+        <string>Smooth</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QCheckBox" name="checkBox_3">
+       <property name="text">
+        <string>Median Blur</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QCheckBox" name="checkBox_2">
+       <property name="text">
+        <string>GaussianBlur</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QCheckBox" name="checkBox_4">
+       <property name="text">
+        <string>Literal Blur</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
   </widget>
@@ -76,7 +119,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>591</width>
+     <width>648</width>
      <height>21</height>
     </rect>
    </property>
