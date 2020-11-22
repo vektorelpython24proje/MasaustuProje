@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication,QMainWindow
+from PyQt5.QtWidgets import QApplication,QMainWindow,QFileDialog
 from PyQt5 import uic,QtWidgets
 from PyQt5.QtCore import QTimer
 from PyQt5.QtGui import QImage,QPixmap
@@ -90,7 +90,13 @@ class App(QMainWindow):
         buffer.open(QBuffer.ReadWrite)
         img.save(buffer,"JPG")
         pil_im = Image.open(io.BytesIO(buffer.data()))
-        pil_im.save("deneme.jpg")
+
+        secenekler = QFileDialog.Options()
+        # secenekler |= QFileDialog.DontUseNativeDialog
+        dosyaismi,_ = QFileDialog.getSaveFileName(self,"Kaydetme","","Bütün Dosyalar(*);;Resim Dosyaları (*.jpg)",options=secenekler)
+        if dosyaismi:
+            print(dosyaismi)
+            pil_im.save(dosyaismi+".jpg")
 
 
 if __name__ == "__main__":
