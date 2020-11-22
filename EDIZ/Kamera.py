@@ -21,6 +21,7 @@ class App(QMainWindow):
         self.btKapat.clicked.connect(self.KameraKapat)
         self.Slider.valueChanged.connect(self.SliderDegisti)
         self.btKaydet.clicked.connect(self.Kaydet)
+        self.actionKapat.triggered.connect(self.KameraKapat)
         self.Slider.setValue(30)
         self.show()
 
