@@ -12,7 +12,7 @@ class App(QMainWindow):
         super().__init__()
         self.timer = QTimer()
         self.isChanged = True
-        uic.loadUi(r"EDIZ\Kamera.ui",self)  # graphical user interface
+        uic.loadUi(r"ARDA\Kamera.ui",self)  # graphical user interface
         self.initUI()
 
     def initUI(self):
@@ -21,7 +21,6 @@ class App(QMainWindow):
         self.btKapat.clicked.connect(self.KameraKapat)
         self.Slider.valueChanged.connect(self.SliderDegisti)
         self.btKaydet.clicked.connect(self.Kaydet)
-        self.actionKapat.triggered.connect(self.KameraKapat)
         self.Slider.setValue(30)
         self.show()
 
