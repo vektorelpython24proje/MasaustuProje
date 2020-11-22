@@ -31,6 +31,13 @@
        </property>
       </widget>
      </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="btAc">
+       <property name="text">
+        <string>Kamera Aç</string>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="0">
       <widget class="QLabel" name="lblCam">
        <property name="text">
@@ -38,10 +45,26 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="btAc">
-       <property name="text">
-        <string>Kamera Aç</string>
+     <item row="3" column="0">
+      <widget class="QProgressBar" name="pB">
+       <property name="value">
+        <number>0</number>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QSlider" name="Slider">
+       <property name="minimum">
+        <number>10</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
       </widget>
      </item>
