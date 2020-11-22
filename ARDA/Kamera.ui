@@ -6,46 +6,49 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>753</width>
-    <height>662</height>
+    <width>648</width>
+    <height>776</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Kamera</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>9</x>
-      <y>9</y>
-      <width>731</width>
-      <height>471</height>
+      <x>20</x>
+      <y>10</y>
+      <width>611</width>
+      <height>561</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="1" column="0">
-      <widget class="QPushButton" name="btnAc">
-       <property name="text">
-        <string>Kamera Aç</string>
-       </property>
-      </widget>
-     </item>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinimumSize</enum>
+     </property>
      <item row="2" column="0">
-      <widget class="QPushButton" name="btnKapat">
+      <widget class="QPushButton" name="btKapat">
        <property name="text">
         <string>İptal</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="0">
-      <widget class="QProgressBar" name="pB">
-       <property name="value">
-        <number>24</number>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="btAc">
+       <property name="text">
+        <string>Kamera Aç</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
+     <item row="0" column="0">
+      <widget class="QLabel" name="lblCam">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
       <widget class="QSlider" name="Slider">
        <property name="minimum">
         <number>10</number>
@@ -61,15 +64,15 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="lblCam">
-       <property name="text">
-        <string/>
+     <item row="3" column="0">
+      <widget class="QProgressBar" name="pB">
+       <property name="value">
+        <number>0</number>
        </property>
       </widget>
      </item>
      <item row="5" column="0">
-      <widget class="QPushButton" name="btnKaydet">
+      <widget class="QPushButton" name="btKaydet">
        <property name="text">
         <string>Kaydet</string>
        </property>
@@ -80,20 +83,13 @@
    <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>480</y>
-      <width>731</width>
-      <height>81</height>
+      <x>20</x>
+      <y>570</y>
+      <width>611</width>
+      <height>51</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
-     <item row="0" column="1">
-      <widget class="QCheckBox" name="chkMedian">
-       <property name="text">
-        <string>Gaussian Blur</string>
-       </property>
-      </widget>
-     </item>
      <item row="0" column="0">
       <widget class="QCheckBox" name="chkSmooth">
        <property name="text">
@@ -102,16 +98,23 @@
       </widget>
      </item>
      <item row="0" column="2">
-      <widget class="QCheckBox" name="chkGauss">
+      <widget class="QCheckBox" name="chkMedian">
        <property name="text">
         <string>Median Blur</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="3">
-      <widget class="QCheckBox" name="chkBilateral">
+     <item row="0" column="1">
+      <widget class="QCheckBox" name="chkGaussian">
        <property name="text">
-        <string>Bilateral Blur</string>
+        <string>GaussianBlur</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QCheckBox" name="chkLiteral">
+       <property name="text">
+        <string>Literal Blur</string>
        </property>
       </widget>
      </item>
@@ -123,8 +126,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>753</width>
-     <height>27</height>
+     <width>648</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
