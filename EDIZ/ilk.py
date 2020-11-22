@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication,QMainWindow,QPushButton
+from PyQt5.QtWidgets import QApplication,QMainWindow
 from PyQt5 import uic,QtWidgets
 
 class App(QMainWindow):
@@ -11,6 +11,9 @@ class App(QMainWindow):
     def initUI(self):
         self.tbl.setRowCount(1)
         self.tbl.setColumnCount(2)
+        # self.tbl.setHorizontalHeaderLabel("A","B")
+        # PySide.QtGui.QTableWidget.setHorizontalHeaderLabels(labels)
+        self.tbl.setHorizontalHeaderLabels(["Adı", "Şifre"])
         self.btGiris.clicked.connect(self.girisYap)
         self.btIptal.clicked.connect(self.temizle)
         self.cmb.currentTextChanged.connect(self.sonuc)
