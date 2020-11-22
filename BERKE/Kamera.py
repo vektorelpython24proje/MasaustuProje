@@ -91,14 +91,14 @@ class App(QMainWindow):
         pil_im = Image.open(io.BytesIO(buffer.data()))
         
         secenekler = QFileDialog.Options()
-        secenekler |= QFileDialog.DontUseNativeDialog()
+        #secenekler |= QFileDialog.DontUseNativeDialog()
         dosyaismi,_ = QFileDialog.getSaveFileName(self,"Kaydetme","","Bütün Dosyalar(*);;Resim Dosyaları (* .jpg)", options = secenekler)
         if dosyaismi:
-            pill_im.save(dosyaismi)
-            pill_im.save(dosyaismi)
+            print(dosyaismi)
+            pil_im.save(dosyaismi+".jpg")
 
 
-        pil_im.save("deneme.jpg")
+        
 
 
 if __name__ == "__main__":
