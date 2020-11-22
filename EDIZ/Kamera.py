@@ -4,6 +4,7 @@ from PyQt5 import uic,QtWidgets
 from PyQt5.QtCore import QTimer
 from PyQt5.QtGui import QImage,QPixmap
 import cv2
+import numpy as np
 
 
 class App(QMainWindow):
@@ -19,6 +20,8 @@ class App(QMainWindow):
         self.btKapat.setEnabled(False)
         self.btKapat.clicked.connect(self.KameraKapat)
         self.Slider.valueChanged.connect(self.SliderDegisti)
+        self.btKaydet.clicked.connect(self.Kaydet)
+        self.Slider.setValue(30)
         self.show()
 
     def KameraAc(self):
@@ -43,6 +46,20 @@ class App(QMainWindow):
             frame = cv2.resize(frame,None,fx=buyukFaktor,fy=buyukFaktor,interpolation=cv2.INTER_AREA)
             height,width,channel = frame.shape  # (640,480,3)
             step = channel*width # (3*480)
+
+            if self.chkSmooth.isChecked():
+                kernel = np.ones((15,15),np.float32)/225
+                # print(kernel)
+                frame = cv2.filter2D(frame,-1,kernel)
+            
+            if self.chkGaussian.isChecked():
+                frame = cv2.GaussianBlur(frame,(15,15),-2)
+            
+            if self.chkMedian.isChecked():
+                frame = cv2.medianBlur(frame,15)
+
+            if self.chkLiteral.isChecked():
+                frame = cv2.bilateralFilter(frame,15,75,75)
             #---------------------------------
             qImg = QImage(frame.data,width,height,step,QImage.Format_BGR888)  # farklı kanallardan aldığı veriyi
             # bir resim olarak ekrana yansıtmak üzere QImage kullanıldı
@@ -61,6 +78,20 @@ class App(QMainWindow):
             pass
         self.timer.stop()
         self.close()
+
+
+    def Kaydet(self):
+        pix = self.lblCam.pixmap()
+        import io
+        from PIL import Image
+        from PyQt5.QtCore import QBuffer
+        img = pix.toImage()
+        buffer = QBuffer()
+        buffer.open(QBuffer.ReadWrite)
+        img.save(buffer,"JPG")
+        pil_im = Image.open(io.BytesIO(buffer.data()))
+        pil_im.save("deneme.jpg")
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
