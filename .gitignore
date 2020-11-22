@@ -1,5 +1,4 @@
 
-settings.json
-launch.json
-*.json
+.vscode/settings.json
+.vscode/launch.json
 *.json
